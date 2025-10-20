@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
           variants={textVariant(0.2)}
           className="text-3xl md:text-4xl font-bold mb-4"
         >
-        CABINET EXECUTIVES 
+           SPECIAL ADVISERS TO THE PRESIDENT 
         </motion.h2>
         <motion.p 
           variants={fadeIn('up', 0.4)}

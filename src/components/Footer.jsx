@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 
@@ -47,17 +47,20 @@ const Footer = () => {
           >
             <motion.div 
               variants={fadeIn('down', 0.5)}
-              className="flex items-center gap-1 mb-6"
+              className="flex items-center gap-2 mb-6"
             >
-              <div className="w-4 h-4 bg-blue-600 rounded-full opacity-75"></div>
-              <div className="w-4 h-4 bg-red-500 rounded-full -ml-2"></div>
-              <span className="text-xl font-medium ml-1">The Next Design</span>
+              <img 
+                src="/logo.png" 
+                alt="Site Logo"
+                className="h-16 w-auto object-contain"
+              />
+              <span className="text-xl font-medium ml-2">NANISS</span>
             </motion.div>
             <motion.p 
               variants={fadeIn('up', 0.6)}
               className="text-gray-600 mb-6"
             >
-              The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times.
+              🏛️ Seal of the President of NANISS
             </motion.p>
             <motion.div 
               variants={fadeIn('up', 0.7)}
@@ -68,13 +71,13 @@ const Footer = () => {
                 href="#" 
                 className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-colors"
               >
-                <FaFacebookF className="w-5 h-5" />
+                <FaWhatsapp className="w-5 h-5" />
               </motion.a>
               <motion.a 
                 whileHover={{ scale: 1.1 }}
                 href="#" 
                 className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-blue-400 hover:text-white transition-colors"
-              >
+              >              
                 <FaTwitter className="w-5 h-5" />
               </motion.a>
               <motion.a 
@@ -142,13 +145,14 @@ const Footer = () => {
               variants={fadeIn('right', 1.0)}
               className="text-gray-600 text-sm"
             >
-              Copyright © {new Date().getFullYear()} codetutorbd.com
+              Copyright © {new Date().getFullYear()} (NANISS), Al-Hikmah University Chapter. All Rights Reserved.
+
             </motion.p>
             <motion.p 
               variants={fadeIn('left', 1.0)}
               className="text-gray-600 text-sm"
             >
-              Created by Md Al Mamun
+              Created by BAKHRSWEB
             </motion.p>
           </motion.div>
         </motion.div>

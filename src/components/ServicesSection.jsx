@@ -1,106 +1,122 @@
 import React from 'react'
-import { BsStack } from 'react-icons/bs'
+import { BsShieldLock, BsBarChart, BsMegaphone } from 'react-icons/bs'
 import { HiLightBulb } from 'react-icons/hi'
-import { FiSettings } from 'react-icons/fi'
-import { BiTime } from 'react-icons/bi'
+import { FiUsers, FiSettings } from 'react-icons/fi'
+import { BiTime, BiBookBookmark } from 'react-icons/bi'
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: <BsStack className="w-8 h-8 text-indigo-600" />,
-      title: "Web Design",
-      description: "One for all and all for one, Muskehounds are always ready.",
-      link: "#learn-more"
+      icon: <BsShieldLock className="w-8 h-8 text-indigo-600" />,
+      title: "Student Welfare & Security",
+      details: [
+        "Ensuring the safety, well-being, and dignity of all members remains a top priority.",
+        "Strengthen cooperation with university security units.",
+        "Establish a Welfare & Security Response Desk.",
+        "Promote student mental health and emergency support systems."
+      ],
     },
     {
       icon: <HiLightBulb className="w-8 h-8 text-amber-400" />,
-      title: "Ad-Creatives", 
-      description: "Alphabet Village and the subline of her own road.",
-      link: "#learn-more"
+      title: "Academic & Economic Empowerment", 
+      details: [
+         "Fostering excellence and opportunities for Niger State students.",
+        "Organize tutorials, mentorships, and academic workshops.",
+        "Provide information on scholarships, grants, and SIWES placements.",
+        "Encourage small-scale student entrepreneurship and skill development programs."
+      ],
     },
     {
-      icon: <FiSettings className="w-8 h-8 text-red-400" />,
-      title: "Automation",
-      description: "Little Blind Text should turn around and return.",
-      link: "#learn-more"
+      icon: <FiUsers className="w-8 h-8 text-red-400" />,
+      title: "Councils & Committees",
+      details: [
+         "Inclusive governance through active participation.",
+        "Form standing and ad-hoc committees to manage key association projects.",
+        "Empower faculty representatives to strengthen communication.",
+        "Promote teamwork, accountability, and inclusive decision-making."
+      ],
     },
     {
       icon: <BiTime className="w-8 h-8 text-cyan-400" />,
-      title: "Infographics",
-      description: "Nothing the copy said could convince her.",
-      link: "#learn-more"
+      title: "Transparency & Accountability",
+      details: [
+         "Building a credible and trusted student government.",
+        "Publish periodic financial and activity reports.",
+        "Enforce open-door leadership and member feedback channels.",
+        "Uphold honesty, discipline, and responsibility in all operations."
+      ],
+    },
+    {
+      icon: <BsMegaphone className="w-8 h-8 text-green-500" />,
+      title: "Communication & Media Relations",
+      details: [
+        "Enhancing NANISS visibility and image across and beyond the university.",
+        "Strengthen media/publicity units to keep members informed.",
+        "Maintain a digital presence through the official website and social platforms.",
+        "Foster positive engagement with student bodies and university authorities."
+      ],
+    },
+    {
+      icon: <BsBarChart className="w-8 h-8 text-blue-500" />,
+      title: "Budget, Planning & Innovation",
+      details: [
+        "Strategic allocation of resources to maximize impact.",
+        "Prepare annual budgets aligned with association goals.",
+        "Prioritize projects that add long-term value to members.",
+        "Encourage innovation through research and creative student ideas."
+      ],
+    },
+    {
+      icon: <BiBookBookmark className="w-8 h-8 text-yellow-500" />,
+      title: "Service Charter",
+      details: [
+        "A commitment to serve every member of NANISS with fairness, respect, and dedication.",
+        "Promote leadership that listens, acts, and delivers.",
+        "Ensure all association activities align with its constitution and core values: Unity, Progress, and Student Welfare."
+      ],
     }
   ]
 
   return (
     <section id="services" className="py-20 container mx-auto px-4 sm:px-6 lg:px-8">
-     <motion.div 
-      variants={fadeIn('up', 0.3)}
-      className='flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24'
-     >
-       {/* Header */}
-       <motion.div 
-        variants={fadeIn('right', 0.4)}
-        className="md:w-1/3"
-       >
-        <motion.h2 
-          variants={textVariant(0.2)}
-          className="text-3xl md:text-4xl font-bold mb-6 md:w-4/5"
-        >
-          Future of support with new shape
-        </motion.h2>
-        <motion.p 
-          variants={fadeIn('up', 0.5)}
-          className="text-gray-600 text-lg mb-4 md:w-4/5"
-        >
-          Discuss your goals, determine success metrics, identify problems
-        </motion.p>
-        <motion.div 
-          variants={fadeIn('up', 0.6)}
-          className="space-y-3"
-        >
-          <motion.div 
-            variants={fadeIn('right', 0.7)}
-            className="flex items-center gap-2"
-          >
-            <div className="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center">
-              <div className="w-2.5 h-2.5 rounded-full bg-indigo-600"></div>
-            </div>
-            <span className="text-gray-600">UX design content strategy</span>
-          </motion.div>
-          <motion.div 
-            variants={fadeIn('right', 0.8)}
-            className="flex items-center gap-2"
-          >
-            <div className="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center">
-              <div className="w-2.5 h-2.5 rounded-full bg-indigo-600"></div>
-            </div>
-            <span className="text-gray-600">Development bring</span>
-          </motion.div>
-        </motion.div>
-        <motion.button 
-          variants={fadeIn('up', 0.9)}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="mt-8 bg-indigo-600 text-white px-8 py-3 cursor-pointer rounded-full hover:bg-indigo-700 transition-colors"
-        >
-          Get started
-        </motion.button>
-      </motion.div>
-
-      {/* Services Grid */}
-      <motion.div 
-        variants={fadeIn('left', 0.4)}
-        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+    {/* Header at the top for all devices */}
+    <motion.div 
+      variants={fadeIn('right', 0.4)}
+      className="mb-10"
+    >
+      <motion.h2 
+        variants={textVariant(0.2)}
+        className="text-3xl md:text-4xl font-bold mb-6 text-center"
       >
-        {services.map((service, index) => (
+        Policy Framework & Strategic Focus
+      </motion.h2>
+      <motion.p 
+        variants={fadeIn('up', 0.5)}
+        className="text-gray-600 text-lg mb-4 text-center"
+      >
+        Discuss your goals, determine success metrics, identify problems
+      </motion.p>
+    </motion.div>
+
+    {/* Services Grid */}
+    <motion.div 
+      variants={fadeIn('left', 0.4)}
+      className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center"
+    >
+      {services.map((service, index) => {
+        // Center the last service on all devices if it's alone in the last row
+        const isLast = index === services.length - 1;
+        const isOdd = services.length % 2 !== 0;
+        const isLastRowAlone = isLast && (services.length % 2 !== 0 || (services.length % 3 === 1 && window.innerWidth >= 1024));
+        return (
           <motion.div 
             key={index}
             variants={fadeIn('up', 0.3 * (index + 1))}
             whileHover={{ scale: 1.05 }}
-            className="bg-white max-w-72 cursor-pointer rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300"
+            className={`bg-white max-w-72 cursor-pointer rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300
+              ${isLastRowAlone ? 'col-span-2 sm:col-span-2 lg:col-span-1 justify-self-center' : ''}`}
           >
             <motion.div 
               variants={fadeIn('down', 0.4 * (index + 1))}
@@ -114,23 +130,15 @@ const ServicesSection = () => {
             >
               {service.title}
             </motion.h3>
-            <motion.p 
-              variants={fadeIn('up', 0.5 * (index + 1))}
-              className="text-gray-600 mb-4"
-            >
-              {service.description}
-            </motion.p>
-            <motion.a 
-              variants={fadeIn('up', 0.6 * (index + 1))}
-              href={service.link}
-              className="text-indigo-600 font-medium hover:text-indigo-700 transition-colors"
-            >
-              LEARN MORE
-            </motion.a>
+            <ul className="text-gray-600 mb-4 list-disc list-inside">
+              {service.details.map((sentence, i) => (
+                <li key={i}>{sentence}</li>
+              ))}
+            </ul>
           </motion.div>
-        ))}
-      </motion.div>
-     </motion.div>
+        );
+      })}
+    </motion.div>
     </section>
   )
 }

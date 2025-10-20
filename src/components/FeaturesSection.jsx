@@ -98,7 +98,7 @@ const FeaturesSection = () => {
           whileTap={{ scale: 0.95 }}
           className="bg-blue-600 text-white cursor-pointer px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors relative"
         >
-          Become a Partner
+          Join NANISS
           <div className="absolute -z-10 w-full h-full rounded-full bg-blue-600/30 blur-xl top-0 left-0"></div>
         </motion.button>
       </motion.div>

@@ -5,7 +5,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const NewsletterSection = () => {
   return (
-    <section id="newsletter" className="section-container px-4 md:px-0">
+    <section id="contact" className="section-container px-4 md:px-0">
       <motion.div 
         variants={fadeIn('up', 0.2)}
         initial="hidden"
@@ -18,53 +18,64 @@ const NewsletterSection = () => {
             variants={fadeIn('left', 0.4)}
             className="absolute top-0 right-0 w-1/2 h-full bg-blue-700 clip-path-slant hidden md:block"
           ></motion.div>
-          
-          <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left Content */}
             <motion.div 
               variants={fadeIn('right', 0.5)}
-              className="text-white max-w-lg text-center md:text-left"
+              className="text-white max-w-lg mx-auto text-center lg:text-left"
             >
               <motion.h2 
                 variants={textVariant(0.3)}
                 className="text-2xl sm:text-3xl md:text-4xl font-medium mb-4"
               >
-                Subscribe newsletter
+                Contact Us
               </motion.h2>
               <motion.p 
                 variants={fadeIn('up', 0.6)}
                 className="text-blue-100 text-sm sm:text-base"
               >
-                Best cooks and best delivery guys all at your service. Hot tasty food
+                We'd love to hear from you! Fill out the form and we'll get back to you soon.
               </motion.p>
             </motion.div>
 
-            {/* Email Form */}
-            <motion.div 
+            {/* Contact Form */}
+            <motion.form 
               variants={fadeIn('left', 0.5)}
-              className="w-full md:w-auto"
+              className="w-full max-w-lg mx-auto bg-white rounded-xl p-6 flex flex-col gap-4 shadow-lg"
+              onSubmit={e => e.preventDefault()}
             >
-              <motion.div 
-                variants={fadeIn('up', 0.6)}
-                className="flex flex-col sm:flex-row gap-4 sm:gap-0"
+              <motion.input
+                variants={fadeIn('right', 0.7)}
+                type="text"
+                placeholder="Your Name"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              />
+              <motion.input
+                variants={fadeIn('right', 0.7)}
+                type="email"
+                placeholder="Your Email"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              />
+              <motion.textarea
+                variants={fadeIn('right', 0.7)}
+                placeholder="Your Message"
+                required
+                rows={4}
+                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none"
+              />
+              <motion.button 
+                variants={fadeIn('left', 0.7)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                type="submit"
+                className="w-full cursor-pointer bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 text-base font-semibold"
               >
-                <motion.input
-                  variants={fadeIn('right', 0.7)}
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="w-full sm:w-auto md:w-80 px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-l-xl sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
-                />
-                <motion.button 
-                  variants={fadeIn('left', 0.7)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full sm:w-auto cursor-pointer bg-green-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-l-none sm:rounded-r-xl hover:bg-green-600 transition-colors flex items-center justify-center sm:justify-start gap-2"
-                >
-                  <span>Discover</span>
-                  <HiArrowRight className="w-5 h-5" />
-                </motion.button>
-              </motion.div>
-            </motion.div>
+                <span>Send Message</span>
+                <HiArrowRight className="w-5 h-5" />
+              </motion.button>
+            </motion.form>
           </div>
         </div>
       </motion.div>

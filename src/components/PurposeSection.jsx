@@ -5,13 +5,24 @@ const PurposeSection = () => {
   const features = [
     {
       icon: "🟣", // Replace with your actual icon component or image
-      title: "Built for impact",
-      description: "We identify and nurture a truly diverse team of designers, developers and marketers"
+      title: "In 2018",
+      description: "The National Association of Niger State Students (NANISS), Al-Hikmah University Chapter, was officially established to serve as the recognized body representing all students of Niger State origin within the university."
     },
     {
       icon: "🔴", // Replace with your actual icon component or image
-      title: "In sync with you",
-      description: "We work the way you do by adapting to your workflows and rhythm we aim to blend in for a seamless."
+      title: "The association",
+      description: "was founded with a mission to promote unity, progress, academic excellence, and welfare among its members while fostering strong partnerships with the university management and external stakeholders."
+    },
+     {
+      icon: "🔴", // Replace with your actual icon component or image
+      title: "Since its inception",
+      description: "NANISS Al-Hikmah has remained committed to providing a platform for leadership development, welfare advocacy, and cultural representation — embodying the vision of building a united and progressive student community."
+    },
+    {
+      icon: "🟣", // Replace with your actual icon component or image
+      title: "Art in the Secretariat",
+      description: "The NANISS Secretariat proudly showcases creative works and cultural artifacts that celebrate the identity, values, and heritage of Niger State students. These artistic expressions serve as a reminder of our shared commitment to excellence, unity, and innovation."
+
     }
   ];
 
@@ -27,15 +38,16 @@ const PurposeSection = () => {
           <motion.div variants={fadeIn('right', 0.3)}>
             <motion.div 
               variants={fadeIn('up', 0.4)}
-              className="text-sm text-purple-600 font-medium mb-2"
+              
+              className="text-3xl md:w-4/5 md:text-4xl font-bold text-gray-900"
             >
-              ACHIEVE MORE
+             About 
             </motion.div>
             <motion.h2 
               variants={textVariant(0.5)}
-              className="text-3xl md:w-4/5 md:text-4xl font-bold text-gray-900"
+              className="text-sm text-purple-600 font-large mb-2  "
             >
-              Purpose of a convoy is to keep your team
+              the NANISS Secretariat (The Villa)
             </motion.h2>
           </motion.div>
 

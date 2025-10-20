@@ -9,9 +9,9 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "#home", label: "Home" },
-    { href: "#about", label: "About Us" },
-    { href: "#services", label: "Our Service" },
-    { href: "#testimonials", label: "Testimonials" },
+    { href: "#about", label: "History of NANISS" },
+    { href: "#services", label: "Policy" },
+    { href: "#testimonials", label: "CABINET EXECUTIVES" },
   ]
 
   return (
@@ -26,16 +26,13 @@ const Navbar = () => {
         {/* Logo */}
         <motion.div 
           variants={fadeIn('right', 0.3)}
-          className="flex items-center gap-1 cursor-pointer"
+          className="flex items-center cursor-pointer"
         >
-          <motion.div 
-            whileHover={{ scale: 1.1 }}
-            className="w-4 h-4 bg-blue-600 rounded-full opacity-75 hover:opacity-100 transition-opacity"
-          ></motion.div>
-          <motion.div 
-            whileHover={{ scale: 1.1 }}
-            className="w-4 h-4 bg-red-500 rounded-full -ml-2 hover:opacity-75 transition-opacity"
-          ></motion.div>
+          <img 
+            src="/logo.png" // Place your logo image in the public folder and update the filename if needed
+            alt="Site Logo"
+            className="h-18 w-auto object-contain"
+          />
         </motion.div>
         {/* Mobile Menu Button */}
         <motion.button 
@@ -76,7 +73,7 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
           className="hidden md:block bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100"
         >
-          <a href="#newsletter">Get in touch</a>
+          <a href="#contact">Contact Us</a>
         </motion.button>
       </div>
 
