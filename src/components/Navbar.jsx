@@ -110,7 +110,9 @@ const Navbar = () => {
               whileTap={{ scale: 0.98 }}
               className="w-full bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 text-sm font-medium transition-all hover:shadow-lg hover:shadow-blue-100"
             >
-              Get in touch
+             <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+            Contact Us
+          </a>
             </motion.button>
           </motion.div>
         </motion.div>
