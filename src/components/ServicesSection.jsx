@@ -102,8 +102,8 @@ const ServicesSection = () => {
 
     {/* Services Grid */}
     <motion.div 
-      variants={fadeIn('left', 0.4)}
-      className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center"
+  variants={fadeIn('left', 0.4)}
+  className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center"
     >
       {services.map((service, index) => {
         // Center the last service on all devices if it's alone in the last row

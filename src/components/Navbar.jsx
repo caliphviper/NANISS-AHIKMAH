@@ -31,7 +31,7 @@ const Navbar = () => {
           <img 
             src="/logo.png" // Place your logo image in the public folder and update the filename if needed
             alt="Site Logo"
-            className="h-18 w-auto object-contain"
+            className="h-15 w-auto object-contain"
           />
         </motion.div>
         {/* Mobile Menu Button */}
