@@ -80,7 +80,7 @@ const ServicesSection = () => {
   ]
 
   return (
-    <section id="services" className="py-20 container mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="services" className="py-14 px-2 sm:px-4 md:px-6 lg:px-8 max-w-4xl mx-auto">
     {/* Header at the top for all devices */}
     <motion.div 
       variants={fadeIn('right', 0.4)}
@@ -102,42 +102,35 @@ const ServicesSection = () => {
 
     {/* Services Grid */}
     <motion.div 
-  variants={fadeIn('left', 0.4)}
-  className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center"
+      variants={fadeIn('left', 0.4)}
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
     >
-      {services.map((service, index) => {
-        // Center the last service on all devices if it's alone in the last row
-        const isLast = index === services.length - 1;
-        const isOdd = services.length % 2 !== 0;
-        const isLastRowAlone = isLast && (services.length % 2 !== 0 || (services.length % 3 === 1 && window.innerWidth >= 1024));
-        return (
+      {services.map((service, index) => (
+        <motion.div 
+          key={index}
+          variants={fadeIn('up', 0.3 * (index + 1))}
+          whileHover={{ scale: 1.05 }}
+          className="bg-white w-full max-w-md mx-auto cursor-pointer rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center"
+        >
           <motion.div 
-            key={index}
-            variants={fadeIn('up', 0.3 * (index + 1))}
-            whileHover={{ scale: 1.05 }}
-            className={`bg-white max-w-72 cursor-pointer rounded-2xl p-6 hover:shadow-xl transition-shadow duration-300
-              ${isLastRowAlone ? 'col-span-2 sm:col-span-2 lg:col-span-1 justify-self-center' : ''}`}
+            variants={fadeIn('down', 0.4 * (index + 1))}
+            className="mb-4"
           >
-            <motion.div 
-              variants={fadeIn('down', 0.4 * (index + 1))}
-              className="mb-4"
-            >
-              {service.icon}
-            </motion.div>
-            <motion.h3 
-              variants={textVariant(0.3)}
-              className="text-xl font-semibold mb-2"
-            >
-              {service.title}
-            </motion.h3>
-            <ul className="text-gray-600 mb-4 list-disc list-inside">
-              {service.details.map((sentence, i) => (
-                <li key={i}>{sentence}</li>
-              ))}
-            </ul>
+            {service.icon}
           </motion.div>
-        );
-      })}
+          <motion.h3 
+            variants={textVariant(0.3)}
+            className="text-xl font-semibold mb-2"
+          >
+            {service.title}
+          </motion.h3>
+          <ul className="text-gray-600 mb-4 list-disc list-inside text-left w-full max-w-xs mx-auto">
+            {service.details.map((sentence, i) => (
+              <li key={i}>{sentence}</li>
+            ))}
+          </ul>
+        </motion.div>
+      ))}
     </motion.div>
     </section>
   )
